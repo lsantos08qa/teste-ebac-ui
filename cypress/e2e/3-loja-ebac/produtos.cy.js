@@ -16,6 +16,4 @@ describe('Funcionalidade: Produtos', () => {
 
             cy.get('#tab-title-description > a').should('contain', 'Descrição')
     });
-
-
 });
