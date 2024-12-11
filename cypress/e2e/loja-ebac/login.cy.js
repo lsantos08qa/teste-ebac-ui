@@ -46,12 +46,12 @@ describe('Funcionalidade: Login', () => {
             cy.get('#username').type(dados.usuario , {log: false})
             cy.get('#password').type(dados.senha , {log: false})
             cy.get('.woocommerce-form > .button').click()
-            cy.get('.woocommerce-MyAccount-content > :nth-child(2)').should('contain','Olá, carvalhorique (não é carvalhorique? Sair)')    
+            cy.get('.woocommerce-MyAccount-content > :nth-child(2)').should('Olá, carvalhoriqueRiqueRique (não é carvalhoriqueRiqueRique? Sair)')    
         });    
     });
 
     it.only('Deve fazer login com sucesso - Usando comandos customizados', () => {
         cy.login('carvalhorique@tuamaeaquelaursa.com' , 'teste123')
-        cy.get('.woocommerce-MyAccount-content > :nth-child(2)').should('contain','Olá, carvalhorique (não é carvalhorique? Sair)')
+        cy.get('.woocommerce-MyAccount-content > :nth-child(2)').should('contain', 'Olá, carvalhoriqueRiqueRique (não é carvalhoriqueRiqueRique? Sair)')
     });
 })
